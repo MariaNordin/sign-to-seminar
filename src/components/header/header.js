@@ -1,4 +1,6 @@
 import React from 'react'
+import HeaderItem from './headerItem/headerItem';
+import './header.css';
 
 export default function header() {
     return (
@@ -9,15 +11,9 @@ export default function header() {
         </div>
         <div id="menu">
             <ul>
-                <li>
-                    HOME
-                </li>
-                <li>
-                    <a href="upcoming.html">UPCOMING SEMINARS</a>
-                </li>
-                <li>
-                    <a href="previous.html">PREVIOUS SEMINARS</a>
-                </li>
+                <HeaderItem text="HOME" url=""/>
+                <HeaderItem text="UPCOMING SEMINARS" url=""/>
+                <HeaderItem text="PREVIOUS SEMINARS" url=""/>
             </ul>
         </div> 
     </div>  

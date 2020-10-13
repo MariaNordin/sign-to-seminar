@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function headerItem(props) {
+export default function HeaderItem(props) {
     return (
         <li>
             <a href="">{props.text}</a>

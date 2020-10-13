@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './../../images/logo.svg';
 import Header from './../header/header';
 import Viewer from './../app/viewer/viewer';
+import Footer from './../footer/footer';
 import './app.css';
 
 function App() {
@@ -9,11 +9,7 @@ function App() {
     <>
     <Header />
     <Viewer toDisplay="upcoming" />
-    
-        
-        <div className="footer">
-            <p>SIGN TO SEMINAR 2.4 © NordBack Studios 2020</p>
-        </div>
+    <Footer />
     </>
   );
 }

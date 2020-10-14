@@ -29,6 +29,7 @@
 form {
     padding-top: 5px;
 }
+
 #form-box {
     margin-bottom: 10px;
 }
@@ -53,4 +54,12 @@ form {
 
 #submit input:hover {
     background-color: #DBB065;
+}
+
+@media (max-width: 600px) {
+
+    #form-section {
+        padding: 20px;
+    }
+  
 }

@@ -21,4 +21,5 @@
   #cup {
     float: left;
     margin-right: 30px;
+    max-width: 100%;
   }

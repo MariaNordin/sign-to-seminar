@@ -1,10 +1,11 @@
-/*--applies to all html-files--*/
+
+/*-------global------*/
+
 html, body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
-
 
 section {
   display: -webkit-flex;
@@ -12,121 +13,10 @@ section {
   flex-direction: row;
 }
 
-/*------------------------------------*/
-
-
-/*-----sign up------------*/
-
-#form-section {
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 100px;
-}
-
-#info-container {
-  height: fit-content;
-  width: fit-content; 
-  margin-right: 100px;
-  margin-bottom: 40px;
-}
-
-#info-container h2 {
-  font-size: 20px;
-  margin: 0;
-  font-weight: 400;
-}
-
-#info-container p {
-  height: fit-content;
-  width: fit-content;
-  margin: 2em 0em;
-  line-height: 1.5em;
-}
-
-form {
-  padding-top: 5px;
-}
-#form-box {
-  margin-bottom: 10px;
-}
-
-#form-box label {
-  line-height: 1.5em;
-}
-
-#form-box input {
-  padding: 10px;
-  padding-right: 20px;
-  
-}
-
-#submit input {
-  background-color: #D9BE9A;
-  font-size: 16px;
-  margin-top: 10px;
-  padding: 10px 35px;
-  width: fit-content;
-}
-
-#submit input:hover {
-  background-color: #DBB065;
-}
-/*-------------------------*/
-
 
 @media (max-width: 600px) {
 
-  /*applies to all html-files*/
   section {
       flex-direction: column;
   }
-  /*-------------------------*/
-
-  /*-----Upcoming------*/
-  nav {
-      padding: 5px 20px;
-  }
-
-  nav ul {
-      padding: 0px;
-  }
-
-  nav li a {
-      font-size: 16px;
-  }
-
-  article {
-      padding: 5px 20px;
-  } 
-
-  article h1 {
-      font-size: 18px;
-      padding: 0px;
-  }
-
-  article p {
-      padding: 0px;
-  }
-
-  article a {
-      float: none;
-      margin: 10px 0px;
-  }
-
-  #sign-up {
-      display: flex;
-      flex-direction: column;
-      margin: 20px 0px;
-  }
-
-  #sign-up a {
-      text-align: center;
-  }
-  /*-------------------*/
-
-  /*-----Sign up-------*/
-  #form-section {
-      padding: 20px;
-  }
-
 }

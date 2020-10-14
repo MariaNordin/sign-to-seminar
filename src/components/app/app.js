@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <Header />
-    <Viewer toDisplay="signUp" />
+    <Viewer toDisplay="home" />
     <Footer />
     </>
   );

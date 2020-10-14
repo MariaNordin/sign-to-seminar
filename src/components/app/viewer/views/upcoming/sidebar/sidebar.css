@@ -1,0 +1,44 @@
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #D9BE9A;
+    padding: 20px 0px;
+    flex-basis: 220px;
+    flex-grow: 0;
+}
+  
+nav ul {
+    list-style-type: none;
+    padding-right: 40px;
+}
+  
+nav li {
+    font-size: 17px;
+    line-height: 2em;
+    color: white;
+}
+
+nav li a {
+    color: black;
+    text-decoration: none;
+}
+  
+nav ul li a:hover {
+    color: white;
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 5px 20px;
+    }
+  
+    nav ul {
+        padding: 0px;
+    }
+  
+    nav li a {
+        font-size: 16px;
+    }
+}

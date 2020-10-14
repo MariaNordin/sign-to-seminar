@@ -1,9 +1,10 @@
 import React from 'react';
 import cup from './../../../../../images/cup.svg';
+import './home.css';
 
 export default function Home() {
     return (
-        <div className="content">
+        <>
             <section>
                 <div id="space">
                     <div id="item-container">
@@ -15,6 +16,6 @@ export default function Home() {
                     </div>          
                 </div> 
             </section>
-        </div>
+        </>
     )
 }

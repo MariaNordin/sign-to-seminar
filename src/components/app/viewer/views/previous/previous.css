@@ -1,0 +1,11 @@
+#previous-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+#previous-container p {
+    margin: 0;
+}

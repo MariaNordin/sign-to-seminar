@@ -1,0 +1,24 @@
+#space {
+    display: flex;
+    width: 100%;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0px 220px;
+  }
+  
+  #item-container {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+  }
+  
+  #item-container p {
+    float: left;
+    margin-top: 11px;
+  }
+  
+  #cup {
+    float: left;
+    margin-right: 30px;
+  }

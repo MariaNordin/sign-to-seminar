@@ -1,16 +1,18 @@
 import React from 'react'
+import cup from './../../../../../images/cup.svg';
+import './previous.css';
 
 export default function Previous() {
     return (
-        <div class="content">
+        <>
         <section>
             <div id="space">
-                <div id="item-container">
-                    <img id="cup" src="../pics/cup.svg"/> 
+                <div id="previous-container">
+                    <img id="cup" src={cup} alt="cup" /> 
                     <p>No previous seminars yet!</p>
                 </div>          
             </div> 
         </section>  
-        </div>
+        </>
     )
 }

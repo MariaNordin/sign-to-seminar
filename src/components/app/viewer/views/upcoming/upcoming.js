@@ -1,8 +1,9 @@
 import React from 'react';
+import './upcoming.css';
 
 export default function Upcoming() {
     return (
-        <div className="content">
+        <>
         <section>
             <nav>
                 <ul>
@@ -43,6 +44,6 @@ export default function Upcoming() {
                 </div>               
             </article>
         </section>
-        </div>
+        </>
     )
 }

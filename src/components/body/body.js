@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './../pages/home/home';
 import Upcoming from './../pages/upcoming/upcoming';
 import Previous from './../pages/previous/previous';
+import SignUp from './../pages/signUp/signUp';
 
 export default class Body extends Component {
     render() {
@@ -15,6 +16,9 @@ export default class Body extends Component {
                     </Route>
                     <Route path='/previous'>
                         <Previous />
+                    </Route>
+                    <Route path='/signUp'>
+                        <SignUp />
                     </Route>
                     <Route path='/'>
                         <Home />

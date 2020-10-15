@@ -1,25 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
+//import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 import './upcoming.css';
 import './sidebar/sidebar.css';
 import Sidebar from './sidebar/sidebar';
 import Seminar from './seminar/seminar';
 import Info from './info/info';
+import ButtonSignUp from './buttonSignUp/buttonSignUp';
 
-export default function Upcoming() {
-    return (
-        <>
-            <section>
-                <Sidebar />    
-                <article>
-                    <Seminar />
-                    <Info />
 
-                    <div id="sign-up">
-                        <p>Wan't to participate in this seminar?</p>
-                        <button href="signUp.html">Sign Up!</button>
-                    </div>            
-                </article>
-            </section>
-        </>
-    )
+export default class Upcoming extends Component {
+    render() {
+        return (
+            <>
+                <section>
+                    <Sidebar />    {/*klickbara "element"*/}
+                    <article>
+                        <Seminar /> {/*Byts ut beroende på klick i sidebar*/}
+                        <Info />
+
+                        <ButtonSignUp link='/signUp' name='Sign Up!' />
+                    </article>
+                </section>
+            </>
+        );
+    }
 }

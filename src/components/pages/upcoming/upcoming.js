@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-//import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Popup from  'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 import './upcoming.css';
 import './sidebar/sidebar.css';
 import Sidebar from './sidebar/sidebar';
 import Seminar from './seminar/seminar';
 import Info from './info/info';
-import ButtonSignUp from './buttonSignUp/buttonSignUp';
+import SignUp from '../signUp/signUp';
 
 
 export default class Upcoming extends Component {
@@ -19,7 +20,11 @@ export default class Upcoming extends Component {
                         <Seminar /> {/*Byts ut beroende på klick i sidebar*/}
                         <Info />
 
-                        <ButtonSignUp link='/signUp' name='Sign Up!' />
+                        
+                        <Popup trigger={<button>Sign Up!</button>}>
+                            <SignUp />
+                        </Popup>
+                        {/*<ButtonSignUp link='/signUp' name='Sign Up!' />*/}
                     </article>
                 </section>
             </>

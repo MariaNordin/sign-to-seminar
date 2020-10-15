@@ -7,27 +7,28 @@
 }
 
 #info-container {
-    height: fit-content;
-    width: fit-content; 
-    margin-right: 100px;
-    margin-bottom: 40px;
+    /*height: fit-content;
+    width: fit-content; */
+    padding: 50px;
+    /*margin-bottom: 40px;*/
 }
 
 #info-container h2 {
+    width: fit-content;
     font-size: 20px;
+    padding-bottom: 2em;
     margin: 0;
     font-weight: 400;
 }
 
 #info-container p {
-    height: fit-content;
-    width: fit-content;
-    margin: 2em 0em;
+    margin: 0;
+    padding-bottom: 2em;
     line-height: 1.5em;
 }
 
 form {
-    padding-top: 5px;
+    padding: 50px;
 }
 
 #form-box {

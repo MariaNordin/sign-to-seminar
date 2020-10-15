@@ -1,22 +1,22 @@
-import React from 'react'
-import logo from './../../images/logo.svg';
-import HeaderItem from './headerItem/headerItem';
+import React, { Component } from 'react';
 import './header.css';
 
-export default function Header() {
-    return (
-        <div className="header">
-        <div id="head">
-            <img className="head-item" src={logo} alt="logo" />
-            <h2 className="head-item">Sign To Seminar</h2>
-        </div>
-        <div id="menu">
-            <ul>
-                <HeaderItem text="HOME" url=""/>
-                <HeaderItem text="UPCOMING SEMINARS" url=""/>
-                <HeaderItem text="PREVIOUS SEMINARS" url=""/>
-            </ul>
-        </div> 
-    </div>  
-    )
+import Logo from './../header/logo/logo';
+
+export default class Header extends Component {
+    render() {
+        return (
+            <div className="header">
+                <Logo />
+
+                <div id="menu">
+                    <ul>
+                        <li>
+                            {this.props.children}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        );
+    }
 }

@@ -14,7 +14,7 @@ export default function SignUp() {
                     <br/>Place: Street City
                     </p>
                     <img src={cup} alt="cup" />
-                </div>
+                </div> 
 
                 <form>
                     <div id="form-box">
@@ -26,7 +26,7 @@ export default function SignUp() {
                         <input type="text" id="lname" name="lname"></input><br/>
                     </div>
                     <div id="form-box">
-                        <label htmlFor="email">Email:</label><br/>
+                        <label htmlFor ="email">Email:</label><br/>
                         <input type="email" id="email" name="email"></input><br/>
                     </div>
                     <div id="submit">

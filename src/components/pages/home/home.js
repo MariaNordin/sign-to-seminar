@@ -1,5 +1,5 @@
 import React from 'react';
-import cup from './../../../../../images/cup.svg';
+import cup from './../../../images/cup.svg';
 import './home.css';
 
 export default function Home() {

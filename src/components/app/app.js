@@ -1,17 +1,28 @@
-import React from 'react';
-import Header from './../header/header';
-import Viewer from './../app/viewer/viewer';
-import Footer from './../footer/footer';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './app.css';
 
-function App() {
-  return (
-    <>
-    <Header />
-    <Viewer toDisplay="home" />
-    <Footer />
-    </>
-  );
-}
+import Header from './../header/header';
+import Logo from './../header/logo/logo';
+import MenuLink from './../header/menuLink/menuLink';
+import Body from './../body/body';
+import Footer from './../footer/footer';
 
-export default App;
+export default class App extends Component {
+  render() {
+    return (
+      <>
+        <Router>
+          <Header>
+            <Logo />
+            <MenuLink link='/' name='HOME' />
+            <MenuLink link='/upcoming' name='UPCOMING SEMINARS' />
+            <MenuLink link='/previous' name='PREVIOUS SEMINARS' />
+          </Header>
+          <Body />
+          <Footer />
+        </Router>
+      </>
+    )
+  }
+}

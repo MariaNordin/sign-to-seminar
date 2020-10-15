@@ -1,5 +1,5 @@
 import React from 'react'
-import cup from './../../../../../images/cup.svg';
+import cup from './../../../images/cup.svg';
 import './previous.css';
 
 export default function Previous() {

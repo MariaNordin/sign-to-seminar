@@ -10,10 +10,8 @@ export default class Header extends Component {
                 <Logo />
 
                 <div id="menu">
-                    <ul>
-                        <li>
-                            {this.props.children}
-                        </li>
+                    <ul>    
+                        {this.props.children}
                     </ul>
                 </div>
             </div>

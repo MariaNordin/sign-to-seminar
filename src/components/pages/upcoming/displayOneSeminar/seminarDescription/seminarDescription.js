@@ -8,10 +8,15 @@ export default class SeminarDescription extends Component {
     componentDidMount() {
         this.fetchSeminar();
     }
+    componentDidUpdate(prevProp) {
+        if(this.props.id !== prevProp.id) this.fetchSeminar();
+    }
     fetchSeminar() {
-        fetch('https://localhost:44346/api/Seminars/15')
-            .then((response) => response.json())
-            .then((json) => this.setState({ seminar: json }));
+        if(this.props.id ) {
+            fetch('https://localhost:44346/api/Seminars/' + this.props.id)
+                .then((response) => response.json())
+                .then((json) => this.setState({ seminar: json }));
+        }
     }
     render() {
         return (

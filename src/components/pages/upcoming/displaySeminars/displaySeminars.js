@@ -21,7 +21,7 @@ export default class DisplaySeminars extends Component {
             <nav>
                 <ul>
                     {this.state.seminars.map((item) => 
-                        (<li onClick={() => this.handleClickEvent(item.id)}>{item.name}</li>
+                        (<li key={item.id} onClick={() => this.handleClickEvent(item.id)}>{item.name}</li>
                     ))}
                 </ul>
             </nav>

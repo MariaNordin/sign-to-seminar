@@ -1,13 +1,18 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import Popup from  'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import './buttonSignUp.css';
+
+import SignUp from './../../signUp/signUp';
 
 export default class ButtonSignUp extends Component {
     render() {
         return (
             <div id="sign-up">
-                <p>Wan't to participate in this seminar?</p>
-                <Link to={this.props.link}>{this.props.name}</Link>
+                <Popup trigger={<button>Sign Up!</button>}>
+                    <SignUp />
+                </Popup>
             </div>            
-        )
+        );
     }
 }

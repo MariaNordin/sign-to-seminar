@@ -19,12 +19,12 @@ nav li {
     color: white;
 }
 
-nav li a {
+nav li {
     color: black;
     text-decoration: none;
 }
   
-nav ul li a:hover {
+nav ul li:hover {
     color: white;
 }
 

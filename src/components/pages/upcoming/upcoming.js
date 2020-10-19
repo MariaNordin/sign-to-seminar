@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import Popup from  'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
+
 
 import './upcoming.css';
-import './sidebar/sidebar.css';
-import Sidebar from './sidebar/sidebar';
-import Seminar from './seminar/seminar';
+import './displaySeminars/displaySeminars.css';
+import DisplaySeminars from './displaySeminars/displaySeminars';
+import DisplayOneSeminar from './displayOneSeminar/displayOneSeminar';
 import Info from './info/info';
-import SignUp from '../signUp/signUp';
+import ButtonSignUp from './buttonSignUp/buttonSignUp';
 
 
 export default class Upcoming extends Component {
@@ -15,16 +14,11 @@ export default class Upcoming extends Component {
         return (
             <>
                 <section>
-                    <Sidebar />    {/*klickbara "element"*/}
+                    <DisplaySeminars onSeminarClick={(id) => console.log(id)}/>
                     <article>
-                        <Seminar /> {/*Byts ut beroende på klick i sidebar*/}
-                        <Info />
-
-                        
-                        <Popup trigger={<button>Sign Up!</button>}>
-                            <SignUp />
-                        </Popup>
-                        {/*<ButtonSignUp link='/signUp' name='Sign Up!' />*/}
+                        <DisplayOneSeminar /> {/*Byts ut beroende på klick i sidebar*/}
+                        <Info />    {/*Byts ut beroende på vilket seminar som visas */}
+                        <ButtonSignUp /> {/*Pop-up ska layoutas och Html-form ska bytas ut...*/}
                     </article>
                 </section>
             </>

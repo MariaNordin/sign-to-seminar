@@ -27,7 +27,7 @@ article p {
   padding-right: 30px;
 }
   
-#sign-up a {
+#sign-up button {
   float: left;
   background-color: #DBB065;
   color: black;
@@ -37,7 +37,7 @@ article p {
   margin: 0px;
 }
   
-#sign-up a:hover {
+#sign-up button:hover {
   color: white;
 }
 

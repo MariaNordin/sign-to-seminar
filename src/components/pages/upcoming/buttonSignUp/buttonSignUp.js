@@ -10,7 +10,7 @@ export default class ButtonSignUp extends Component {
         return (
             <div id="sign-up">
                 <Popup trigger={<button>Sign Up!</button>}>
-                    <SignUp />
+                    <SignUp id={ this.props.id} />
                 </Popup>
             </div>            
         );

@@ -21,12 +21,12 @@ export default class DisplayOneSeminar extends Component {
     render() {
         return (
             <>
-                {this.state.seminar != null ? 
-                    (<h1>{this.state.seminar.name}</h1>)
-                    : null}
-                {this.state.seminar != null ? 
-                    (<p>{this.state.seminar.description}</p>)
-                    : null}               
+                {this.state.seminar != null ? (
+                    <>
+                        <h1>{this.state.seminar.name}</h1>
+                        <p>{this.state.seminar.description}</p>
+                    </>
+                ) : null}              
             </>
         )
     }

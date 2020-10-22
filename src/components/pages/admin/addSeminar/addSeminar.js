@@ -11,7 +11,7 @@ export default class AddSeminar extends Component {
             body: JSON.stringify({
                 name: this.state.name,
                 description: this.state.description,
-                seminarOfSpeakerId: this.state.id,
+                SeminarOfSpeakerId: this.state.seminarOfSpeakerId,
             }), 
             headers: { 'Content-type': 'application/json; charset=UTF-8'}
         });

@@ -25,6 +25,7 @@ export default class DisplayOneSeminar extends Component {
                     <>
                         <h1>{this.state.seminar.name}</h1>
                         <p>{this.state.seminar.description}</p>
+                        <p>Speaker: {this.state.seminar.speaker.name}</p>
                     </>
                 ) : null}              
             </>

@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 100px;
+    padding: 50px;
 }
 
 #info-container {
@@ -27,33 +27,27 @@
     line-height: 1.5em;
 }
 
-form {
-    padding: 50px;
+#form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
-.form-box {
-    margin-bottom: 10px;
-}
-
-#form-box label {
-    line-height: 1.5em;
-}
-
-#form-box input {
-    padding: 10px;
-    padding-right: 20px;
-    
+.form-box input {
+    padding: 7px;
+    margin: 10px;
 }
 
 #submit {
+    float: right;
     background-color: #D9BE9A;
     font-size: 16px;
-    margin: 10px;
-    padding: 10px 35px;
-    width: fit-content;
+    margin-top: 30px;
+    padding: 15px 45px;
+    width: inherit;
 }
 
-#submit button:hover {
+#submit:hover {
     background-color: #DBB065;
 }
 

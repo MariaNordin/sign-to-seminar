@@ -26,25 +26,27 @@ export default class Form extends Component {
     
     render() {
         return (
-            <>
-                <div className="form-box">
-                Name:
-                    <input 
-                        type = 'text'
-                        value = {this.state.name}
-                        onChange = {(e) => this.setState({ name: e.target.value })}
-                    />
-                </div>
-                <div className="form-box">
-                Email:
-                    <input
-                        type = 'text'
-                        value = {this.state.email}
-                        onChange = {(e) => this.setState({ email: e.target.value })}
-                    />
-                </div>
+            <span id="form-container">
+                <span>
+                    <div className="form-box">
+                    Name: 
+                        <input 
+                            type = 'text'
+                            value = {this.state.name}
+                            onChange = {(e) => this.setState({ name: e.target.value })}
+                        />
+                    </div>
+                    <div className="form-box">
+                    Email: 
+                        <input
+                            type = 'text'
+                            value = {this.state.email}
+                            onChange = {(e) => this.setState({ email: e.target.value })}
+                        />
+                    </div>
+                </span>  
                 <button id="submit" onClick = {() => this.saveSignUp()}>Sign Up!</button>               
-            </>
+            </span>
         );
     }
 }

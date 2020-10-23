@@ -26,7 +26,7 @@ export default class Form extends Component {
     
     render() {
         return (
-            <span id="form-container">
+            <>
                 <span>
                     <div className="form-box">
                     Name: 
@@ -46,7 +46,7 @@ export default class Form extends Component {
                     </div>
                 </span>  
                 <button id="submit" onClick = {() => this.saveSignUp()}>Sign Up!</button>               
-            </span>
+            </>
         );
     }
 }

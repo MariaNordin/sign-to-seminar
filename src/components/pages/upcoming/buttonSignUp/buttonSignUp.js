@@ -12,13 +12,13 @@ export default class ButtonSignUp extends Component {
     }
     render() {
         const Modal = () => (
-            <Popup trigger={<button>Sign Up!</button>} modal>
+            <Popup trigger={<button>Sign Up!</button>} id={ this.props.id} modal>
                     <SignUp id={ this.props.id} />
             </Popup>
         );
         return (
             <div id="sign-up">
-                <Modal />
+                <Modal id={ this.props.id} />
             </div>            
         );
     }

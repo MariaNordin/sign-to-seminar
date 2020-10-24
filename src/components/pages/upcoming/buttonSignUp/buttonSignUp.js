@@ -6,19 +6,15 @@ import './buttonSignUp.css';
 import SignUp from './../../signUp/signUp';
 
 export default class ButtonSignUp extends Component {
-    constructor() {
-        super();
-        this.state = { show: false }
-    }
     render() {
         const Modal = () => (
-            <Popup trigger={<button>Sign Up!</button>} id={ this.props.id} modal>
-                    <SignUp id={ this.props.id} />
+            <Popup trigger={<button>Sign Up!</button>} modal>
+                    <SignUp id={this.props.id} date={this.props.date} name={this.props.name} />
             </Popup>
         );
         return (
             <div id="sign-up">
-                <Modal id={ this.props.id} />
+                <Modal id={this.props.id} date={this.props.date} name={this.props.name} />
             </div>            
         );
     }

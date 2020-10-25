@@ -1,9 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+import SearchField from './searchField/searchField';
+//import './displaySeminars.css';
 
 export default class DisplaySeminars extends Component {
     constructor() {
         super();
-        this.state = { seminars: [] }
+        this.state = { seminars: [], searchString: '' }
     }
     componentDidMount() {
         this.fetchSeminars();
@@ -19,9 +22,13 @@ export default class DisplaySeminars extends Component {
     render() {
         return (
             <nav>
+                <SearchField
+                    handleSearchClick={(text) => this.setState({ searchString: text })} 
+                />
                 <ul>
                     {this.state.seminars.map((item) => 
-                        (<li key={item.id} onClick={() => this.handleClickEvent(item.id)}>{item.name}</li>
+                        (<li key={item.id} onClick={() => this.handleClickEvent(item.id)}>{(item.name) + ' ' +  {/* extremt ful lösning*/}
+                            (item.day.day.substring(5, 7)) + '/' + (item.day.day.substring(8, 10))}</li>
                     ))}
                 </ul>
             </nav>

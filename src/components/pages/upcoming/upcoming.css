@@ -44,7 +44,13 @@ article p {
 @media (max-width: 600px) {
 
   article {
-    padding: 5px 20px;
+    display: flex;
+    width: 100%;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0px 220px;
+/*    padding: 5px 20px; */
   } 
   
   article h1 {

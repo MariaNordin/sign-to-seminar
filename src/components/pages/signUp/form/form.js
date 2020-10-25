@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 import './../signUp.css';
 
 export default class Form extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = { name: '', email: '' }
     }
     

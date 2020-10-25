@@ -41,13 +41,13 @@ export default class AddSeminar extends Component {
                 />
                 Date: 
                 <input 
-                    type='string'
+                    type='text'
                     value={this.state.date}
                     onChange={(e) => this.setState({ date: e.target.value })}
                 />
                 Time:
                 <input
-                    type='string'
+                    type='text'
                     value={this.state.time}
                     onChange={(e) => this.setState({ time: e.target.value })}
                 />

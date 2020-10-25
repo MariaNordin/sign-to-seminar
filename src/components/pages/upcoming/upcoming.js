@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 
 import './upcoming.css';
+import './../home/home.css';
 import './displaySeminars/displaySeminars.css';
 import DisplaySeminars from './displaySeminars/displaySeminars';
 import DisplayOneSeminar from './displayOneSeminar/displayOneSeminar';

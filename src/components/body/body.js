@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Home from './../pages/home/home';
 import Upcoming from './../pages/upcoming/upcoming';
 import Previous from './../pages/previous/previous';
 import Admin from './../pages/admin/admin';
@@ -11,9 +10,6 @@ export default class Body extends Component {
         return (
             <>
                 <Switch>
-                    <Route path='/upcoming'>
-                        <Upcoming />
-                    </Route>
                     <Route path='/previous'>
                         <Previous />
                     </Route>
@@ -21,7 +17,7 @@ export default class Body extends Component {
                         <Admin />
                     </Route>
                     <Route path='/'>
-                        <Home />
+                        <Upcoming />
                     </Route>
                 </Switch>
             </>

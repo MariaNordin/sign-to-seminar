@@ -11,13 +11,21 @@ import DisplayOneSeminar from './displayOneSeminar/displayOneSeminar';
 export default class Upcoming extends Component {
     constructor() {
         super();
-        this.state = { id: undefined }
+        this.state = { seminars: [], id: undefined }
+    }
+    componentDidMount() {
+        this.fetchSeminars();
+    }
+    fetchSeminars() {
+        fetch('https://localhost:44346/api/Seminars')
+        .then((response) => response.json())
+        .then((json) => this.setState({ seminars: json }));
     }
     render() {
         return (
             <>
                 <section>
-                    <DisplaySeminars onSeminarClick={(id) => this.setState({ id: id })}/>
+                    <DisplaySeminars seminars={this.state.seminars} onSeminarClick={(id) => this.setState({ id: id })}/>
                     <article>
                         <DisplayOneSeminar id={this.state.id} />
                     </article>

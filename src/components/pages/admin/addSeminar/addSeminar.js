@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class AddSeminar extends Component {
     constructor() {
         super();
-        this.state = { name: '', description: '', seminarOfSpeakerId: 0, seminarOfDayId: 0 };
+        this.state = { name: '', description: '', speakersName: '', date: '', time: '' };
     }
     saveSeminar() {
         fetch('https://localhost:44346/api/Seminars/', {
@@ -11,8 +11,9 @@ export default class AddSeminar extends Component {
             body: JSON.stringify({
                 name: this.state.name,
                 description: this.state.description,
-                SeminarOfSpeakerId: this.state.seminarOfSpeakerId,
-                SeminarOfDayId: this.state.seminarOfDayId
+                SpeakersName: this.state.speakersName,
+                Date: this.state.date,
+                Time: this.state.time
             }), 
             headers: { 'Content-type': 'application/json; charset=UTF-8'}
         });
@@ -20,7 +21,7 @@ export default class AddSeminar extends Component {
     render() {
         return (
             <div>
-                Name: 
+                Title: 
                 <input 
                     type='text' 
                     value={this.state.name} 
@@ -32,17 +33,23 @@ export default class AddSeminar extends Component {
                     value={this.state.description}
                     onChange={(e) => this.setState({ description: e.target.value })}
                 />
-                Speaker id: 
+                Speakers name: 
                 <input
-                    type='number'
-                    value={this.state.seminarOfSpeakerId}
-                    onChange={(e) => this.setState({ seminarOfSpeakerId: e.target.value })}
+                    type='text'
+                    value={this.state.speakersName}
+                    onChange={(e) => this.setState({ speakersName: e.target.value })}
                 />
-                Day id: 
+                Date: 
                 <input 
-                    input='number'
-                    value={this.state.seminarOfDayId}
-                    onChange={(e) => this.setState({ seminarOfDayId: e.target.value })}
+                    type='string'
+                    value={this.state.date}
+                    onChange={(e) => this.setState({ date: e.target.value })}
+                />
+                Time:
+                <input
+                    type='string'
+                    value={this.state.time}
+                    onChange={(e) => this.setState({ time: e.target.value })}
                 />
                 <button onClick={() => this.saveSeminar()}>Save</button>
             </div>

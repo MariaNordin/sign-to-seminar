@@ -8,8 +8,10 @@ nav {
     flex-grow: 0;
 }
 
-#search {
-    margin-left: 30px;
+#search input {
+    margin-left: 38px;
+    padding: 5px;
+    font-size: inherit;
 }
   
 nav ul {

@@ -11,12 +11,14 @@ export default class SearchField extends Component {
                 <input 
                     text={this.state.text} 
                     placeholder='Search' 
-                    onChange={e => this.setState({ text: e.target.value })} 
+                    onChange={e => { this.setState({ text: e.target.value });
+                    this.props.handleSearchChange( e.target.value );
+                    }} 
                 />
-                <button 
+                {/*<button 
                     onClick={() => this.props.handleSearchClick(this.state.text)}
                     >Search
-                </button>
+                </button>*/}
             </div>
         )
     }

@@ -18,10 +18,16 @@ export default class DisplaySeminars extends Component {
     filter(filterText) {
         var outData = [];
         this.props.seminars.forEach(item => {
-            if(item.name.search(filterText) >= 0)
+            if(this.compareSearchTextWithObject(item, filterText))
             outData.push(item);
         });
         this.setState({ filteredSeminars: outData })
+    }
+    compareSearchTextWithObject(item, filterText) {
+        return (
+            item.name.toLowerCase().search(filterText.toLowerCase()) >= 0 || 
+            item.description.toLowerCase().search(filterText.toLowerCase()) >= 0
+            );
     }
     handleClickEvent(id) {
         this.props.onSeminarClick(id);
@@ -30,7 +36,7 @@ export default class DisplaySeminars extends Component {
         return (
             <nav>
                 <SearchField
-                    handleSearchClick={(text) => this.filter(text) } 
+                    handleSearchChange={(text) => this.filter(text) } 
                 />
                 <ul>
                     {this.state.filteredSeminars.map((item) => 

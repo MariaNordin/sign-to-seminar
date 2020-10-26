@@ -38,7 +38,7 @@ article p {
 }
   
 #sign-up button:hover {
-  color: white;
+  background-color: #D9BE9A;
 }
 
 @media (max-width: 600px) {

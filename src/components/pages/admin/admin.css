@@ -1,0 +1,28 @@
+.AddSeminar {
+    margin: 50px 550px 50px 150px;
+}
+#title {
+    margin-bottom: 30px;
+}
+.SeminarInfoContainer {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    margin: 5px 0px 15px;
+    padding: 5px;
+
+}
+#desc {
+    padding: 20px;
+}
+button {
+    margin-top: 10px;
+    padding: 10px 40px;
+    font-size: inherit;
+    background-color:  #D9BE9A;
+}
+
+button:hover {
+    background-color: #DBB065;
+}

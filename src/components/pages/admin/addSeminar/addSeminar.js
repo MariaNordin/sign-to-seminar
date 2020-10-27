@@ -3,7 +3,16 @@ import React, { Component } from 'react';
 export default class AddSeminar extends Component {
     constructor() {
         super();
-        this.state = { name: '', description: '', speakersName: '', date: '', time: '' };
+        this.state = { name: '', description: '', speakersName: '', date: '', time: '', message: '' };
+    }
+    handleInput(date, time) {
+        var testStr = date + time;
+        const dateTimeRegex = /\d{4}\/\d{2}\/\d{4}\:\d{2}/;
+        (dateTimeRegex.test(testStr)) ? (
+            this.saveSeminar()
+        ):
+        this.setState({ message: 'Date or Time format is incorrect'})
+
     }
     saveSeminar() {
         fetch('https://localhost:44346/api/Seminars/', {
@@ -19,7 +28,6 @@ export default class AddSeminar extends Component {
         });
     }
     render() { 
-
         return (
             <div className='AddSeminar'>
                 <div id='title' >Add new Seminar</div>
@@ -57,7 +65,8 @@ export default class AddSeminar extends Component {
                         onChange={(e) => this.setState({ time: e.target.value })}
                     />
                 </div>
-                <button onClick={() => this.saveSeminar()}>Save</button>
+                <button onClick={() => this.handleInput(this.state.date, this.state.time)}>Save</button>
+                <div id="message">{this.state.message}</div>
             </div>
         )
     }

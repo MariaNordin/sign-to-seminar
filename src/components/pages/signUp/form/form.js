@@ -7,9 +7,14 @@ export default class Form extends Component {
         super();
         this.state = { name: '', email: '', message: ''}
     }
-    
-    saveSignUp() {
-        
+    handleInput(email) {
+        const emailRegex = /^\S+@\S+\.\S+$/;
+        (emailRegex.test(email)) ? (
+            this.saveSignUp()
+        ):
+        this.setState({ message: 'Not a valid email address.'})
+    }
+    saveSignUp() { 
         fetch('https://localhost:44346/api/Users', { 
             method: 'POST',
             body: JSON.stringify({
@@ -25,7 +30,7 @@ export default class Form extends Component {
             }
             else {
                 if(response.status == '400') {
-                    throw 'Already signed up';
+                    throw 'You already signed up for this seminar <3';
                 }
                 else {
                     throw 'Something went wrong';
@@ -37,17 +42,6 @@ export default class Form extends Component {
             this.setState({ message: e, fetchStatus: 1 })
         );
     }   
-        /*response.json())
-        .then((json) => this.setState({ message: json }))
-        .then((ret) => {
-            if(ret.success) {
-                this.setState({ message: "Success" });
-            }
-            else {
-                this.setState({ message: "Bad" });
-            }
-        })*/ 
-    
     render() {
         return (
             <>
@@ -69,8 +63,8 @@ export default class Form extends Component {
                         />
                     </div>
                 </span>  
-                <button id="submit" onClick = {() => this.saveSignUp()}>Sign Up!</button>
-                <div>{this.state.message}</div>              
+                <button id="submit" onClick = {() => this.handleInput(this.state.email)}>Sign Up!</button>
+                <div id='message'>{this.state.message}</div>              
             </>
         );
     }

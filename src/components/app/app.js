@@ -14,7 +14,6 @@ export default class App extends Component {
         <Router>
           <Header>
             <MenuLink link='/' name='HOME' />
-            {/*<MenuLink link='/upcoming' name='UPCOMING SEMINARS' />*/}
             <MenuLink link='/previous' name='PREVIOUS SEMINARS' />
             <MenuLink link='/admin' name='ADMIN' />
           </Header>

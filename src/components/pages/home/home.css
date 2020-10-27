@@ -1,10 +1,8 @@
 #space {
     display: flex;
     width: 100%;
-    height: inherit;
-    justify-content: center;
-    align-items: center;
-    padding: 120px 0px 220px;
+    padding: 110px 0px 130px 70px;
+    /*margin-left: 80px;*/
   }
   
   #item-container {

@@ -5,7 +5,7 @@ import './../signUp.css';
 export default class Form extends Component {
     constructor() {
         super();
-        this.state = { name: '', email: '' }
+        this.state = { name: '', email: '', message: ''}
     }
     
     saveSignUp() {
@@ -18,11 +18,35 @@ export default class Form extends Component {
                 seminarId: this.props.id,
             }),
             headers: { 'Content-type': 'application/json; charset=UTF-8'}
-        });
-        /*
-        .then((response) => response.json())
-        .then((json) => this.setState({ message: json }));*/
-    }
+        })
+        .then((response) => {
+            if(response.ok) {
+                return response.json();
+            }
+            else {
+                if(response.status == '400') {
+                    throw 'Already signed up';
+                }
+                else {
+                    throw 'Something went wrong';
+                }
+            }
+        })
+        .then((json) => this.setState({ message: json.message}))
+        .catch((e) =>
+            this.setState({ message: e, fetchStatus: 1 })
+        );
+    }   
+        /*response.json())
+        .then((json) => this.setState({ message: json }))
+        .then((ret) => {
+            if(ret.success) {
+                this.setState({ message: "Success" });
+            }
+            else {
+                this.setState({ message: "Bad" });
+            }
+        })*/ 
     
     render() {
         return (
@@ -45,7 +69,8 @@ export default class Form extends Component {
                         />
                     </div>
                 </span>  
-                <button id="submit" onClick = {() => this.saveSignUp()}>Sign Up!</button>               
+                <button id="submit" onClick = {() => this.saveSignUp()}>Sign Up!</button>
+                <div>{this.state.message}</div>              
             </>
         );
     }

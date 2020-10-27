@@ -10,7 +10,7 @@ export default class SearchField extends Component {
             <div id='search'>
                 <input 
                     text={this.state.text} 
-                    placeholder='Search' 
+                    placeholder='Search'
                     onChange={e => { this.setState({ text: e.target.value });
                     this.props.handleSearchChange( e.target.value );
                     }} 

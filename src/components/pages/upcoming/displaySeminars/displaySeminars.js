@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import SearchField from './searchField/searchField';
 
 export default class DisplaySeminars extends Component {
-    constructor() {
-        super();
-        this.state = { filteredSeminars: [] };
+    constructor(props) {
+        super(props);
+        this.state = { filteredSeminars: props.seminars, desc: '' };
     }
-    componentDidMount() {
-        this.fetchSeminars();
+    componentDidUpdate(prevProp) {
+        if(this.props.seminars != prevProp.seminars) {
+            this.setState({ filteredSeminars: this.props.seminars });
+        }
     }
     fetchSeminars() {
         fetch('https://localhost:44346/api/Seminars')
@@ -40,8 +42,9 @@ export default class DisplaySeminars extends Component {
                 />
                 <ul>
                     {this.state.filteredSeminars.map((item) => 
-                        (<li key={item.id} onClick={() => this.handleClickEvent(item.id)}>{(item.name) + ' ' + 
-                            (item.day.day.substring(5, 7)) + '/' + (item.day.day.substring(8, 10))}</li>
+                        (<li key={item.id} onClick={() => this.handleClickEvent(item.id)}>{(item.name)}
+                            <p>{item.description.split(/\s+/).slice(0,6).join(' ') + '...'}</p>
+                        </li>
                     ))}
                 </ul>
             </nav>

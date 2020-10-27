@@ -4,7 +4,7 @@ article {
   -ms-flex: 2;
   flex: 2;
   background-color: white;
-  padding: 50px 70px;
+  padding: 60px 70px;
 }
   
 article h1 {
@@ -18,7 +18,7 @@ article p {
 }
   
 #sign-up {
-  padding-top: 50px;
+  padding-top: 80px;
 }
   
 #sign-up p {
@@ -34,7 +34,7 @@ article p {
   font-size: 18px;
   text-decoration: none;
   padding: 15px 35px;
-  margin: 0px;
+  margin: 0px 0px 35px;
 }
   
 #sign-up button:hover {

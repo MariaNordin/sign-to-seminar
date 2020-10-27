@@ -1,3 +1,10 @@
+#previous-space {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 220px 0px;
+}
 #previous-container {
     display: flex;
     justify-content: center;

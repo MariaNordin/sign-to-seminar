@@ -18,7 +18,8 @@ export default class AddSeminar extends Component {
             headers: { 'Content-type': 'application/json; charset=UTF-8'}
         });
     }
-    render() {
+    render() { 
+
         return (
             <div className='AddSeminar'>
                 <div id='title' >Add new Seminar</div>
@@ -43,12 +44,14 @@ export default class AddSeminar extends Component {
                     />
                     Date: 
                     <input 
+                        placeholder='yyyy/mm/dd'
                         type='text'
                         value={this.state.date}
                         onChange={(e) => this.setState({ date: e.target.value })}
                     />
                     Time:
                     <input
+                        placeholder='hh:mm'
                         type='text'
                         value={this.state.time}
                         onChange={(e) => this.setState({ time: e.target.value })}

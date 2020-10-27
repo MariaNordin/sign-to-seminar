@@ -15,10 +15,6 @@ export default class SearchField extends Component {
                     this.props.handleSearchChange( e.target.value );
                     }} 
                 />
-                {/*<button 
-                    onClick={() => this.props.handleSearchClick(this.state.text)}
-                    >Search
-                </button>*/}
             </div>
         )
     }

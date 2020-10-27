@@ -25,7 +25,16 @@ export default class AddSeminar extends Component {
                 Time: this.state.time
             }), 
             headers: { 'Content-type': 'application/json; charset=UTF-8'}
-        });
+        })
+        .then((response) => {
+            if(response.ok) {
+                return response.json();
+            } else {
+                throw 'Something went wrong';
+            }
+        })
+        .then((json) => this.setState({ message: json.message })
+        );
     }
     render() { 
         return (

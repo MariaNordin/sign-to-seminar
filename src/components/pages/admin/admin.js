@@ -4,19 +4,20 @@ import 'reactjs-popup/dist/index.css';
 
 import UpdateSeminar from './updateSeminar/updateSeminar';
 import AddSeminar from './addSeminar/addSeminar';
+import './../upcoming/displaySeminars/displaySeminars.css';
 import './admin.css';
 
 export default class Admin extends Component {
     render() {
         const Modal = () => (
-            <>
-                <Popup trigger={<button>Add new seminar</button>} modal>
-                        <AddSeminar />
+            <div>
+                <Popup trigger={<button className='adminButtons'>Add new seminar</button>} modal>
+                    <AddSeminar />
                 </Popup>
-                <Popup trigger={<button>Edit seminar</button>} modal>
+                <Popup trigger={<button className='adminButtons'>Edit seminar</button>} modal>
                     <UpdateSeminar />
                 </Popup>
-            </>
+            </div>    
         );
         return (
             <>

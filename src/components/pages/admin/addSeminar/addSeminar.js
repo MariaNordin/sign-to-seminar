@@ -48,7 +48,7 @@ export default class AddSeminar extends Component {
                         onChange={(e) => this.setState({ name: e.target.value })}
                     />
                     Description: 
-                    <input id='desc'
+                    <textarea 
                         type='text'
                         value={this.state.description}
                         onChange={(e) => this.setState({ description: e.target.value })}

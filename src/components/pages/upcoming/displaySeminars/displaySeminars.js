@@ -5,26 +5,21 @@ import SearchField from './searchField/searchField';
 export default class DisplaySeminars extends Component {
     constructor(props) {
         super(props);
-        this.state = { filteredSeminars: props.seminars, desc: '' };
+        this.state = { filteredSeminars: props.seminars };
     }
     componentDidUpdate(prevProp) {
         if(this.props.seminars != prevProp.seminars) {
             this.setState({ filteredSeminars: this.props.seminars });
         }
     }
-    fetchSeminars() {
-        fetch('https://localhost:44346/api/Seminars')
-        .then((response) => response.json())
-        .then((json) => this.setState({ filteredSeminars: json }));
-    }
-    filter(filterText) {
+    filterOnText(filterText) {
         var outData = [];
         this.props.seminars.forEach(item => {
             if(this.compareSearchTextWithObject(item, filterText))
             outData.push(item);
         });
         this.setState({ filteredSeminars: outData })
-    }
+    } 
     compareSearchTextWithObject(item, filterText) {
         return (
             item.name.toLowerCase().search(filterText.toLowerCase()) >= 0 || 
@@ -38,9 +33,9 @@ export default class DisplaySeminars extends Component {
         return (
             <nav>
                 <SearchField
-                    handleSearchChange={(text) => this.filter(text) } 
+                    handleSearchChange={(text) => this.filterOnText(text) } 
                 />
-                <ul>
+                <ul>                    
                     {this.state.filteredSeminars.map((item) => 
                         (<li key={item.id} onClick={() => this.handleClickEvent(item.id)}>{(item.name)}
                             <p>{item.description.split(/\s+/).slice(0,6).join(' ') + '...'}</p>

@@ -25,7 +25,10 @@ export default class Upcoming extends Component {
         return (
             <>
                 <section>
-                    <DisplaySeminars seminars={this.state.seminars} onSeminarClick={(id) => this.setState({ id: id })}/>
+                    <DisplaySeminars 
+                        seminars={this.state.seminars} 
+                        onSeminarClick={(id) => this.setState({ id: id })}
+                    />
                     <article>
                         <DisplayOneSeminar id={this.state.id} />
                     </article>

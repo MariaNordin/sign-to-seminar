@@ -8,7 +8,7 @@ export default class DisplaySeminars extends Component {
         this.state = { filteredSeminars: props.seminars };
     }
     componentDidUpdate(prevProp) {
-        if(this.props.seminars != prevProp.seminars) {
+        if(this.props.seminars !== prevProp.seminars) {
             this.setState({ filteredSeminars: this.props.seminars });
         }
     }

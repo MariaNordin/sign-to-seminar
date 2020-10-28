@@ -29,7 +29,7 @@ export default class Form extends Component {
                 return response.json();
             }
             else {
-                if(response.status == '400') {
+                if(response.status === '400') {
                     throw 'You already signed up for this seminar <3';
                 }
                 else {

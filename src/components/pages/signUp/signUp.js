@@ -15,9 +15,9 @@ export default class SignUp extends Component {
                         <InfoBox date={this.props.date} />
                         <img src={cup} alt="cup" />
                     </div>
-                    <span id="form-container">
+                    <div id="form-container">
                         <Form id={this.props.id} />
-                    </span>
+                    </div>
                 </section>     
             </>
         )

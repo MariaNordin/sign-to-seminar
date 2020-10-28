@@ -21,8 +21,12 @@ export default class UpdateSeminar extends Component {
         return (
             <div id='update'>
                 <section>
-                    <DisplaySeminars seminars={this.state.seminars} onSeminarClick={(id) => this.setState({ id: id })}/>
-                    <EditThisSeminar id={this.state.id} />
+                    <div id='seminarList'>
+                        <DisplaySeminars seminars={this.state.seminars} onSeminarClick={(id) => this.setState({ id: id })}/>
+                    </div>
+                    <div id='edit-container'>
+                        <EditThisSeminar id={this.state.id} />
+                    </div>
                 </section>
             </div>
         )

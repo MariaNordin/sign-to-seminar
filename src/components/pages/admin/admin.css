@@ -75,3 +75,13 @@ button:hover {
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
 }
+#deleteButton {
+    background-color: #DBB065;
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 15px 45px;
+}
+
+#deleteButton:hover {
+    background-color: #D9BE9A;
+}

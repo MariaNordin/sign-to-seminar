@@ -75,6 +75,10 @@ button:hover {
     padding: 20px;
     width: 100%;
 }
+#delete-box {
+    display: flex;
+    flex-direction: column;
+}
 #delete-container h3 {
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;

@@ -45,11 +45,11 @@ export default class DeleteThisSeminar extends Component {
         return (
             <div>
                 {this.state.seminar !== null ? (
-                    <div>
+                    <div id='delete-box'>
                         <h3>Delete {this.state.seminar.name}?</h3>
                         <InfoBox date={this.state.seminar.day.day} />
                         <button id='deleteButton' onClick={() => this.deleteSeminar()}>Delete</button>
-                        <p>{this.state.message}</p>
+                        <div id='delete-message'>{this.state.message}</div>
                     </div>   
                 ): this.fetchSeminar()}
             </div>

@@ -5,7 +5,7 @@ import InfoBox from './../../../signUp/infoBox/infoBox';
 export default class DeleteThisSeminar extends Component {
     constructor() {
         super();
-        this.state = { seminar: null }
+        this.state = { seminar: null, message: '' }
     }
     componentDidMount() {
         this.fetchSeminar();
@@ -49,6 +49,7 @@ export default class DeleteThisSeminar extends Component {
                         <h3>Delete {this.state.seminar.name}?</h3>
                         <InfoBox date={this.state.seminar.day.day} />
                         <button id='deleteButton' onClick={() => this.deleteSeminar()}>Delete</button>
+                        <p>{this.state.message}</p>
                     </div>   
                 ): this.fetchSeminar()}
             </div>

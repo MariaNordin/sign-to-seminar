@@ -33,7 +33,7 @@ export default class Form extends Component {
                     throw 'You already signed up for this seminar <3';
                 }
                 else {
-                    throw 'Something went wrong';
+                    throw 'You already signed up for this seminar <3';
                 }
             }
         })

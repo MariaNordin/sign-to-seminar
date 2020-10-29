@@ -33,7 +33,9 @@ export default class AddSeminar extends Component {
                 throw 'Something went wrong';
             }
         })
-        .then((json) => this.setState({ message: json.message })
+        .then((json) => this.setState({ message: json.message }))
+        .catch((e) =>
+            this.setState({ message: e, fetchStatus: 1 })
         );
     }
     render() { 

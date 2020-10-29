@@ -4,6 +4,7 @@ import 'reactjs-popup/dist/index.css';
 
 import UpdateSeminar from './updateSeminar/updateSeminar';
 import AddSeminar from './addSeminar/addSeminar';
+import DeleteSeminar from './deleteSeminar/deleteSeminar';
 import './../upcoming/displaySeminars/displaySeminars.css';
 import './admin.css';
 
@@ -16,6 +17,9 @@ export default class Admin extends Component {
                 </Popup>
                 <Popup trigger={<button className='adminButtons'>Edit seminar</button>} modal>
                     <UpdateSeminar />
+                </Popup>
+                <Popup trigger={<button className='adminButtons'>Delete seminar</button>} modal>
+                    <DeleteSeminar />
                 </Popup>
             </div>    
         );
